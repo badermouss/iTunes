@@ -23,7 +23,7 @@ class View(ft.UserControl):
         self._title = ft.Text("TdP - Esame del 14/09/2022", color="red", size=24)
         self._page.controls.append(self._title)
 
-        #ROW1
+        # ROW1
         self._txtInDurata = ft.TextField(label="Durata")
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo",
                                                on_click=self._controller.handleCreaGrafo)
@@ -33,9 +33,9 @@ class View(ft.UserControl):
         ], alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row1)
 
-        #ROW2
-        self._ddAlbum = ft.Dropdown(label="Album", on_change=self._controller.getSelectedAlbum)
-        self._btnAnalisiComp = ft.ElevatedButton(text = "Analisi Componente.",
+        # ROW2
+        self._ddAlbum = ft.Dropdown(label="Album")
+        self._btnAnalisiComp = ft.ElevatedButton(text="Analisi Componente.",
                                                  on_click=self._controller.handleAnalisiComp)
 
         row2 = ft.Row([
@@ -44,10 +44,10 @@ class View(ft.UserControl):
         ], alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row2)
 
-        #ROW3
+        # ROW3
         self._txtInSoglia = ft.TextField(label="Soglia")
         self._btnSetAlbum = ft.ElevatedButton(text="Set di Album",
-                                               on_click=self._controller.handleGetSetAlbum)
+                                              on_click=self._controller.handleGetSetAlbum)
         row3 = ft.Row([
             ft.Container(self._txtInSoglia, width=300),
             ft.Container(self._btnSetAlbum, width=300)
